@@ -1,0 +1,86 @@
+ 
+ ***  URL Routing in Django REST Framework  *** 
+
+(1)Defining URLs and linking them to views.  
+ - In Django, URLs are used to route incoming HTTP requests to the 
+   appropriate view functions or class-based views that handle the logic 
+   of the application. Here's the theoretical breakdown of how URLs are
+   defined and linked to views in Django:
+
+ 1.URLs in Django
+ - URLs in Django are defined in URL configuration files (urls.py). This
+   configuration allows the Django application to match incoming requests
+   to specific views based on the URL pattern in the request.
+
+ 	 - URL Pattern: A string that defines a URL structure and maps it to a
+      specific view function or class.
+
+    - URLconf: A set of URL patterns defined in a urls.py file, which 
+      Django uses to resolve URLs.
+
+ 2.Views in Django
+ - A view is a function or a class that receives an HTTP request and
+   returns an HTTP response. It contains the logic necessary to generate
+   the response, which could involve rendering HTML, redirecting the user,
+   returning JSON, etc.
+
+   - Function-based View (FBV): A Python function that takes a request 
+     object and returns a response object.
+
+   - Class-based View (CBV): A class that provides methods for 
+     handling  different HTTP methods (GET, POST, etc.).
+
+ 3.How URL Mapping Works
+ - Django’s URL dispatcher uses regular expressions or string patterns to
+   map a URL to a view function.
+
+   - Static URLs: For example, if a URL pattern is simply 'home/', it\
+     will match the URL http://yourdomain/home/ and route that request 
+     to the view associated with it.
+
+   - Dynamic URLs: Django can also handle dynamic parts in URLs, such 
+     as '<int:id>', which allows capturing variable parts of the URL 
+     (like an ID or username) and passing them to the view.
+
+ 4.URL Configuration
+ - App-Level urls.py: Each app within a Django project typically has 
+   its own urls.py file, where URL patterns for that app are defined. 
+   This file maps URL patterns to specific views.
+
+ - Project-Level urls.py: The root project’s urls.py file typically
+   includes the URLs of all individual apps within the project using 
+   the include() function. This acts as a central hub for all the app 
+   URL configurations.
+
+ 5.Linking URLs to Views
+ - When you define a URL pattern in urls.py, you link it to a view that
+   will handle requests to that URL. A URL pattern is typically linked to:
+
+   - A function-based view: A simple Python function.
+
+   - A class-based view: A class that may define multiple methods 
+    (like get, post, etc.) for handling different request types.
+
+ - For example, when a user accesses a certain URL, Django matches the 
+   URL pattern with the registered URLconf, and the corresponding view 
+   function or class is invoked to process the request and generate a 
+   response.
+ 
+ 6.Using URL Names
+ - To make URLs more flexible and maintainable, Django allows you to 
+   assign names to URL patterns. This way, URLs can be dynamically 
+   generated in templates or views using the {% url %} template tag or 
+   reverse() function without hardcoding them.
+
+=> Key Concepts:
+ 
+ - URLconf: A module that contains all the URL mappings.
+
+ - URL pattern: A pattern that maps a URL to a view function or class.
+
+ - View: A function or class that processes requests and returns responses.
+
+ - Dynamic URLs: URLs that capture data (e.g., user ID) from the URL
+   string.
+
+ - include() function: Allows including URL patterns from other modules.

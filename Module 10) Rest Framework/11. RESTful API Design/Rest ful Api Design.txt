@@ -1,0 +1,46 @@
+ 
+ ***  RESTful API Design *** 
+
+(1) REST principles: statelessness, resource-based URLs, and using HTTP
+    methods for CRUD operations.  
+
+  - Here’s a theoretical explanation of key REST principles: statelessness,
+    resource-based URLs, and HTTP methods for CRUD operations.
+
+-=> What is REST?
+  - REST (Representational State Transfer) is an architectural style for
+    designing networked applications. It relies on a stateless, client-
+    server communication model and uses standard HTTP methods.
+
+   1. Statelessness
+   
+   Definition:
+   -  Each HTTP request from a client to the server must contain all the
+      information needed to understand and process the request. The server
+      does not store anything about the client’s session between requests.
+
+   Implications:
+
+    - No server-side session state
+
+    - Each request is independent
+
+    - Scales well (e.g., for cloud applications)
+
+ - Example: A user sends a token (e.g., JWT) with every API request for
+   authentication.
+
+  2. Resource-Based URLs
+  
+  Definition:
+   - Resources (data entities like users, products, etc.) are identified 
+     by URIs (Uniform Resource Identifiers). REST treats everything as 
+     a resource.
+
+  Principles:
+
+   - Use nouns, not verbs, in URLs
+
+   - Each resource has a unique URL
+
+   - URLs represent collections or single items

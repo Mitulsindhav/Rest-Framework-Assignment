@@ -1,0 +1,91 @@
+ 
+ *** Authentication and Authorization API   *** 
+
+(1) Difference between authentication and authorization. 
+
+-=> Authentication (Who are you?)
+ - Definition:
+   - The process of verifying who a user is.
+
+ - Purpose:
+   - To confirm the user's identity before granting access.
+
+ - Example:
+  - Entering your username and password to log in.
+
+ - Outcome:
+  - If successful, the system knows who you are.
+
+ - Common Methods:
+
+  - Password-based login
+
+  - OTP (One-Time Password)
+
+  - Biometric (fingerprint/face)
+
+  - OAuth (e.g., Google login)
+
+-=> Authorization (What can you do?)
+ 
+ - Definition:
+  - The process of verifying what a user is allowed to do.
+
+ - Purpose:
+  - To control access to resources and actions based on permissions.
+
+ - Example:
+  - A logged-in user can view their profile, but only an admin can 
+    delete users.
+
+ - Outcome:
+  - Determines whether a user has permission to access a resource or 
+    perform an action.
+
+ - Common Forms:
+
+  - Role-based access (admin, editor, viewer)
+
+  - Permission-based (e.g., can_edit, can_delete)
+
+(2) Implementing authentication using Django REST Framework’s token-based
+    system.
+
+-=> What is Token-Based Authentication?
+  - Token-based authentication is a method where the server issues a token
+    (a unique string) to a user after verifying their credentials. The 
+    client then includes this token in the header of each future request 
+    to access protected resources.
+
+-=> How It Works in Django REST Framework (DRF)
+   1. User Login:
+    - The user sends their username and password to a designated endpoint
+      (e.g., /api-token-auth/).
+
+   2. Token Issuance:
+    - If the credentials are correct, the server responds with a token
+      linked to that user.
+
+   3. Client Stores Token:
+    - The client (e.g., frontend app) saves the token locally (e.g., in 
+      localStorage or cookies).
+
+   4. Authenticated Requests:
+    - For all protected API requests, the client includes the token in 
+      the Authorization header:
+
+   5. Server Verification:
+    - The backend verifies the token and, if valid, grants access to the 
+      requested resource.
+
+ -=> DRF Token Authentication Components
+   - Token Model:
+    - Django uses a token model to store and associate tokens with users.
+
+   - Authentication Class:
+    - DRF uses TokenAuthentication to process the token in request headers.
+
+   - Permission Classes:
+    - DRF allows setting permission rules (e.g., IsAuthenticated) to
+      restrict access to authenticated users only.
+

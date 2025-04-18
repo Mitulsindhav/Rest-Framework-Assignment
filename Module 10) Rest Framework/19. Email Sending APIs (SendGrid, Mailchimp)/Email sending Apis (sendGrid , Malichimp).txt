@@ -1,0 +1,74 @@
+ 
+ *** Email Sending APIs (SendGrid, Mailchimp)  *** 
+
+(1) Using email sending APIs like SendGrid and Mailchimp to send
+    transactional emails.
+ -  Transactional emails are automated, real-time messages sent to
+    individuals based on specific actions or events — for example, 
+    password resets, order confirmations, or OTPs. Tools like SendGrid 
+    and Mailchimp Transactional (formerly Mandrill) provide robust APIs 
+    for sending these emails reliably and at scale.
+
+-=> What Are Transactional Emails?
+  - Transactional emails are event-driven messages sent to a single 
+    user based on interactions with an app or website. Examples include:
+
+     - Registration confirmations
+
+     - Password reset links
+
+     - Purchase receipts or invoices
+
+     - OTP (One-Time Password) messages
+
+     - Account notifications
+
+-=>  How These APIs Work (Conceptually)
+  1. Setup:
+
+    - Sign up for a SendGrid or Mailchimp account.
+
+    - Create and verify a sender domain or email address.
+
+    - Generate an API key for secure authentication.
+
+  2. Compose Email Content:
+
+    - Create reusable templates using dynamic placeholders 
+      (e.g., {{username}}, {{otp}}).
+
+    - Templates are stored and managed via the provider’s dashboard.
+
+  3. Send API Request:
+
+    - Use a RESTful POST request to the provider’s email endpoint.
+
+    -  Include:
+
+       - Recipient details (To, CC, BCC)
+
+       - Subject
+
+       - Content (HTML or plain text)
+
+       - Data to populate dynamic fields (e.g., username, order ID)
+
+       - API Key for authentication
+
+  4. Response Handling:
+
+   - API returns a success or error status.
+
+   - Optionally log or display response data (e.g., message ID).
+
+  5. Track and Analyze:
+
+  - Use built-in analytics to monitor:
+
+       - Delivery status
+
+       - Open rates
+
+       - Clicks
+
+       - Bounce or spam reports

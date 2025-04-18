@@ -1,0 +1,56 @@
+ 
+ ***  GitHub API Integration *** 
+
+(1) Introduction to GitHub API and how to interact with repositories, pull
+    requests, and issues. 
+
+ - Introduction to GitHub API
+   - The GitHub API is a web-based interface that allows developers to  
+     interact with GitHub's features programmatically. It provides access
+     to various GitHub services, including managing repositories, issues, 
+     pull requests, and user information. GitHub offers two primary types
+     of APIs:
+
+   1. REST API: The more common and widely used API, which uses HTTP
+      methods (GET, POST, PUT, DELETE) for interacting with resources.
+
+   2. GraphQL API: A flexible and efficient alternative to REST, allowing
+      you to query only the data you need, in a single request.
+
+ - For this explanation, we’ll focus on GitHub's REST API and how you can
+   interact with repositories, pull requests, and issues.
+
+ - Key Concepts of GitHub API
+  
+   - Authentication:
+    - To interact with the GitHub API, authentication is typically 
+      required. You can use Personal Access Tokens (PAT) or OAuth for
+      authenticating requests. For public repositories, some endpoints may 
+      not require authentication, but for private data or higher limits,
+      authentication is necessary.
+
+   - Rate Limits:
+    - GitHub API usage is limited to a certain number of requests per hour,
+      depending on whether you are authenticated or not. Unauthenticated
+      requests are limited to 60 requests per hour, while authenticated 
+      requests can make up to 5,000 requests per hour.
+
+ - Interacting with GitHub Repositories
+    1. Repository Information:
+      - GitHub repositories are the heart of GitHub's version control 
+        system. The API allows you to access repository details, including
+        metadata (name, description, owner) and content (files, branches).
+
+   - Get a Repository:
+    - To fetch details about a repository, such as its description or
+      owner, you can make a GET request.
+
+    2. Repository Management:
+     - Through the API, you can also delete, fork, or star repositories,
+       modify settings, and even create releases for your projects.
+
+  - Interacting with Pull Requests
+    - Pull Request Overview:
+    - A pull request is a method used in GitHub to submit contributions to
+      a repository. You can create, list, and manage pull requests via 
+      the API.

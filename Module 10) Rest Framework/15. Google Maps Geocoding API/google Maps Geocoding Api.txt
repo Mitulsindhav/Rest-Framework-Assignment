@@ -1,0 +1,60 @@
+ 
+ ***  Google Maps Geocoding API *** 
+
+(1) Using Google Maps Geocoding API to convert addresses into coordinates.
+-=> Using Google Maps Geocoding API to Convert Addresses into Coordinates    
+    The Google Maps Geocoding API allows you to convert addresses into
+    geographical coordinates (latitude and longitude), making it an 
+    essential tool for location-based services in applications. This API
+    helps in handling addresses and mapping them to geographic locations,
+    enabling features like mapping, distance calculations, and spatial
+    analysis.
+
+-=> How Google Maps Geocoding API Works
+   1. API Key:
+    - To use the Geocoding API, you need an API key which can be obtained
+      from the Google Cloud Console. This key authenticates your requests 
+      and is required to access the service.
+
+   2. Geocoding Request:
+    - A geocoding request involves sending an HTTP request to the Google
+      Maps API, passing in the address you want to geocode. The API will 
+      then respond with the latitude and longitude of that address.
+
+-=> Components of a Geocoding API Request
+  - address:
+   - This is the address that you want to geocode (e.g., "1600 
+     Amphitheatre Parkway, Mountain View, CA").
+
+  - key:
+   - This is your personal API key provided by Google to authenticate
+     your requests.
+
+  - optional parameters:
+
+   - language: You can specify the language for the response (e.g., en 
+     for English).
+
+   - region: Specifies the region code, which helps narrow down the 
+     search results (e.g., US for the United States).
+
+   - components: Use this to restrict the search to specific countries,
+     postal codes, or administrative areas.
+
+-=> API Response
+   - The response from the Geocoding API is typically in JSON format. For
+     a given address, the API will return a set of results with 
+     geographical coordinates and other related data.
+
+   - The response will contain:
+
+   1. Location Data:
+    - The latitude and longitude of the address in the geometry.location 
+      field.
+
+   2. Formatted Address:
+    - A human-readable version of the input address.
+
+   3. Address Components:
+    - This provides detailed parts of the address, such as street number,
+      locality, administrative areas, and country.  

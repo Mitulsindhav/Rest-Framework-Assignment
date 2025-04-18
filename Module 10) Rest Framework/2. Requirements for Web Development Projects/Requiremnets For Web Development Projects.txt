@@ -1,0 +1,133 @@
+ 
+ ***  Requirements for Web Development Projects  *** 
+
+(1) Understanding project requirements.
+
+=> What Are Project Requirements?
+ - Project requirements describe what a project is supposed 
+   to do, including:
+
+ - What problems it solves
+ - Who the users are
+ - What features it must have
+ - How it should behave
+ - What constraints or limitations exist
+
+-> Types of Requirements:
+
+1. Functional Requirements (What it should do):
+ - Specific features or behaviors of the system.
+
+ - Example: “Users should be able to register and log in.”
+
+2. Non-Functional Requirements (How it should work):
+ - Quality attributes like speed, security, usability.
+
+ - Example: “The system should respond within 2 seconds.”
+
+3. Business Requirements:
+ - High-level goals from the business point of view.
+
+ - Example: “Increase user sign-ups by 30% in 6 months.”
+
+4. User Requirements:
+ - What the end-users need to do.
+
+ - Example: “As a customer, I want to track my order status.”
+
+5. Technical Requirements:
+ - Constraints on technology, tools, platforms, or integrations.
+
+ - Example: “Use MySQL for the database.”
+
+-> Steps to Understand and Gather Requirements:
+
+1. Stakeholder Interviews
+ - Talk to clients, users, team members to gather expectations.
+
+2. Requirement Documents
+ - Ask for or create:
+
+ - Software Requirement Specification (SRS)
+
+ - Feature List
+
+ - User Stories or Use Cases
+
+3. Research and Analysis
+ - Study existing systems, competitors, or similar solutions 
+   to get clarity.
+
+4. Create Wireframes or Mockups
+ - Visualizing helps understand what the system should look 
+   and behave like.
+
+5. Break Down into Tasks
+ - Divide high-level requirements into actionable development 
+   tasks.
+
+ - Example (Insurance Management System):
+ - Functional:
+ - Admin can approve or reject insurance claims.
+
+ - Users can register and upload documents.
+
+ - Non-Functional:
+ - Should send email confirmation within 5 seconds.
+
+ - Must work on both mobile and desktop.
+
+ - Technical:
+ - Use Django for the back end, MySQL as the database.
+
+
+(2) Setting up the environment and installing necessary packages. 
+
+=> Setting Up the Environment (Theory)
+ 
+ - Setting up the environment means preparing your system with the tools
+   and configurations needed to develop and run your application smoothly.
+
+-> Why It's Important:
+ 
+- Ensures consistency across development, testing, and production.
+
+ - Avoids dependency conflicts.
+
+ - Speeds up development and debugging.
+
+-=>Key Components in Environment Setup
+
+1. Text Editor or IDE
+ - A place to write and manage your code.
+
+ - Examples: VS Code, PyCharm, Sublime Text.
+
+2. Programming Language & Runtime
+ - You must install the language your project uses, such as Python, 
+   Node.js, PHP, or Java.
+
+ - The runtime allows your system to execute code written in that language.
+
+3. Package Manager
+ - Tools that help you install and manage libraries and dependencies:
+
+ - Python: pip
+
+ - Node.js: npm or yarn
+
+ - PHP: Composer
+
+4. Virtual Environment (optional but recommended)
+ - Creates an isolated space to install packages so they don’t conflict 
+   with other projects.
+
+ - Especially useful in Python and Node.js development.
+
+5. Version Control System
+ - Git is commonly used to track changes and collaborate with others.
+
+ - Helps maintain code history and manage contributions.
+
+
+
